@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<h3 class="mb-3">Add New Game Record</h3>
+
+<form action="index.php?act=addSubmit" method="post" class="col-md-6">
+    <div class="mb-3">
+        <label>Game Name</label>
+        <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Platform</label>
+        <input type="text" name="platform" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Monthly Subscription</label>
+        <input type="number" name="monthly_subscription" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Category</label>
+        <input type="text" name="category" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Image Filename</label>
+        <input type="text" name="filename" class="form-control" value="default.jpg">
+    </div>
+    <button type="submit" class="btn btn-success">Save Record</button>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<h3 class="mb-3">Search Game Records</h3>
+
+<form method="get">
+    <!-- 用隐藏域传递act参数，不会被环境丢弃 -->
+    <input type="hidden" name="act" value="searchDo">
+    <div class="mb-3">
+        <label>Keyword (Name / Category)</label>
+        <input type="text" name="kw" class="form-control" placeholder="Enter keyword" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+{% endblock %}
